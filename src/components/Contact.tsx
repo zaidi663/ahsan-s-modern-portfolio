@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'ahsan@example.com' },
+    { icon: Mail, label: 'Email', value: 'ahsanzaidi663@gmail.com' },
     { icon: MapPin, label: 'Location', value: 'Available Worldwide' },
     { icon: Phone, label: 'Response Time', value: 'Within 24 hours' },
   ];
@@ -95,7 +95,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
-                    placeholder="John Doe"
+                    placeholder="Ali"
                     required
                   />
                 </div>
