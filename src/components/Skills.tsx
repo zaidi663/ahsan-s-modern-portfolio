@@ -6,37 +6,28 @@ const skillCategories = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'React', level: 90 },
+      { name: 'React.js', level: 90 },
       { name: 'Next.js', level: 85 },
-      { name: 'TypeScript', level: 80 },
       { name: 'JavaScript', level: 95 },
-    ],
-  },
-  {
-    title: 'Styling',
-    skills: [
+      { name: 'HTML/CSS', level: 90 },
       { name: 'Tailwind CSS', level: 90 },
       { name: 'Material UI', level: 85 },
-      { name: 'CSS/SCSS', level: 88 },
-      { name: 'Framer Motion', level: 75 },
     ],
   },
   {
-    title: 'E-commerce',
+    title: 'Tools',
     skills: [
-      { name: 'Shopify', level: 88 },
-      { name: 'Liquid', level: 80 },
-      { name: 'Stripe', level: 75 },
-      { name: 'SEO', level: 82 },
-    ],
-  },
-  {
-    title: 'Backend & Tools',
-    skills: [
-      { name: 'Node.js', level: 70 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'REST APIs', level: 85 },
       { name: 'Git/GitHub', level: 90 },
+      { name: 'Figma', level: 75 },
+      { name: 'Shopify', level: 88 },
+    ],
+  },
+  {
+    title: 'Other',
+    skills: [
+      { name: 'REST APIs', level: 85 },
+      { name: 'Responsive Design', level: 92 },
+      { name: 'Component Architecture', level: 88 },
     ],
   },
 ];
@@ -44,14 +35,14 @@ const skillCategories = [
 const techLogos = [
   { name: 'React', color: '#61DAFB' },
   { name: 'Next.js', color: '#000000' },
-  { name: 'TypeScript', color: '#3178C6' },
   { name: 'JavaScript', color: '#F7DF1E' },
+  { name: 'HTML', color: '#E34F26' },
+  { name: 'CSS', color: '#1572B6' },
   { name: 'Tailwind', color: '#06B6D4' },
   { name: 'MUI', color: '#007FFF' },
-  { name: 'Shopify', color: '#96BF48' },
-  { name: 'MongoDB', color: '#47A248' },
-  { name: 'Node.js', color: '#339933' },
   { name: 'Git', color: '#F05032' },
+  { name: 'Figma', color: '#F24E1E' },
+  { name: 'Shopify', color: '#96BF48' },
 ];
 
 export default function Skills() {
