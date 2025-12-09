@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ExternalLink, Github, Folder } from 'lucide-react';
 import { Button } from './ui/button';
+import fickleFlightImg from '@/assets/fickle-flight.png';
 
 const projects = [
   {
@@ -17,11 +18,12 @@ const projects = [
   {
     title: 'Fickle Flight',
     description: 'A React-powered flight booking platform with advanced search, filtering, and a smooth reservation flow.',
-    image: '/placeholder-flight.jpg',
+    image: '/assets/fickle-flight.png',
     tech: ['React', 'JavaScript', 'REST APIs', 'CSS'],
     github: 'https://github.com',
     live: 'https://example.com',
     featured: true,
+    hasImage: true,
   },
   {
     title: 'Xecutor',
@@ -79,10 +81,20 @@ export default function Projects() {
                   }`}
                 >
                   <div className="relative overflow-hidden rounded-2xl aspect-video bg-secondary">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Folder className="w-20 h-20 text-primary/30" />
-                    </div>
+                    {project.hasImage ? (
+                      <img 
+                        src={project.title === 'Fickle Flight' ? fickleFlightImg : project.image} 
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Folder className="w-20 h-20 text-primary/30" />
+                        </div>
+                      </>
+                    )}
                     <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-4">
                       <Button variant="secondary" size="sm" asChild>
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
