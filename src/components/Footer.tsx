@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com', label: 'GitHub' },
@@ -12,15 +12,6 @@ export default function Footer() {
     <footer className="py-8 border-t border-border">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Copyright */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm text-muted-foreground flex items-center gap-1"
-          >
-            Built with <Heart className="h-4 w-4 text-destructive fill-destructive" /> by Ahsan © {new Date().getFullYear()}
-          </motion.p>
 
           {/* Social Links */}
           <motion.div
