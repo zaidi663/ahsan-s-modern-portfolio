@@ -82,11 +82,19 @@ export default function Projects() {
                 >
                   <div className="relative overflow-hidden rounded-2xl aspect-video bg-secondary">
                     {project.hasImage ? (
-                      <img 
-                        src={project.title === 'Fickle Flight' ? fickleFlightImg : project.image} 
-                        alt={project.title}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
+                      <>
+                        <img 
+                          src={project.title === 'Fickle Flight' ? fickleFlightImg : project.image} 
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        {/* Gradient overlay for text readability */}
+                        <div className={`absolute inset-0 ${
+                          index % 2 === 1 
+                            ? 'bg-gradient-to-l from-background/90 via-background/50 to-transparent' 
+                            : 'bg-gradient-to-r from-background/90 via-background/50 to-transparent'
+                        }`} />
+                      </>
                     ) : (
                       <>
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
@@ -118,8 +126,8 @@ export default function Projects() {
                     index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : 'md:col-start-6'
                   } md:absolute md:inset-y-0 flex flex-col justify-center z-10`}
                 >
-                  <span className="text-primary font-mono text-sm mb-2">Featured Project</span>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">{project.title}</h3>
+                  <span className="text-primary font-mono text-sm mb-2 font-semibold drop-shadow-sm">Featured Project</span>
+                  <h3 className="text-2xl font-bold text-foreground mb-4 drop-shadow-md">{project.title}</h3>
                   <div className="glass-card p-6 mb-4">
                     <p className="text-muted-foreground">{project.description}</p>
                   </div>
